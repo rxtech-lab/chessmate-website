@@ -2,7 +2,6 @@ import DownloadButton from "@/components/DownloadButton";
 import FeatureSection from "@/components/FeatureSection";
 import Header from "@/components/Header";
 import ScreenshotGallery from "@/components/ScreenshotGallery";
-import Image from "next/image";
 import { Suspense } from "react";
 
 // Define icons for features
@@ -109,9 +108,8 @@ const features = [
     icon: <AIIcon />,
   },
   {
-    title: "PGN Import & Export",
-    description:
-      "Easily import your own games from PGN files and export them with added annotations.",
+    title: "PGN Import",
+    description: "Easily import your own games from PGN files.",
     icon: <FileIcon />,
   },
 ];
@@ -176,7 +174,7 @@ export default function Home() {
               Download ChessMate today and start learning from your games with
               AI-powered analysis and detailed explanations.
             </p>
-            <Suspense fallback>
+            <Suspense>
               <DownloadButton />
             </Suspense>
           </div>
